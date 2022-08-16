@@ -48,7 +48,7 @@
 				"     deletable:false,",
 				"     insertable:true,",
 				"     updateable:true,",
-				"     upsertable:false,",
+				"     upsertable:true,",
 				"     keys:['empno'],",
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
