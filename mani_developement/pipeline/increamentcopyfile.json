@@ -61,7 +61,7 @@
 								"type": "Expression"
 							},
 							"wildcardFolderPath": {
-								"value": "@activity('Get Metadata1').output.childItems.name",
+								"value": "@activity('Get Metadata1').output.childItems.item.name\r\n",
 								"type": "Expression"
 							},
 							"wildcardFileName": "*",
