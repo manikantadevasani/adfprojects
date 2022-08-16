@@ -43,12 +43,7 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          eno as integer,",
-				"          ename as string,",
-				"          esal as integer",
-				"     ),",
-				"     allowSchemaDrift: true,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source(output(",
