@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ADFassETL"
+		},
+		"ls_storage03_accountKey": {
+			"value": ""
+		},
+		"ls_storage004_accountKey": {
+			"value": ""
+		},
+		"ls_storage03_properties_typeProperties_url": {
+			"value": "https://stroage03.dfs.core.windows.net/"
+		},
+		"ls_storage004_properties_typeProperties_url": {
+			"value": "https://mystorage004.dfs.core.windows.net/"
+		}
+	}
+}
