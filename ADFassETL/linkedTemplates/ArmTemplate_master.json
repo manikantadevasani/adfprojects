@@ -7,29 +7,37 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "ADFassETL"
 		},
-		"ls_storage03_accountKey": {
+		"ds_mystoragelake02_accountKey": {
 			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_storage03'"
-		},
-		"ls_storage004_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'ls_storage004'"
+			"metadata": "Secure string for 'accountKey' of 'ds_mystoragelake02'"
 		},
 		"ls_mystoragelake01_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_mystoragelake01'"
 		},
-		"ls_storage03_properties_typeProperties_url": {
+		"ls_storage004_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_storage004'"
+		},
+		"ls_storage03_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_storage03'"
+		},
+		"ds_mystoragelake02_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://stroage03.dfs.core.windows.net/"
+			"defaultValue": "https://mystroagelake02.dfs.core.windows.net/"
+		},
+		"ls_mystoragelake01_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://mystroagelake01.dfs.core.windows.net/"
 		},
 		"ls_storage004_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://mystorage004.dfs.core.windows.net/"
 		},
-		"ls_mystoragelake01_properties_typeProperties_url": {
+		"ls_storage03_properties_typeProperties_url": {
 			"type": "string",
-			"defaultValue": "https://mystroagelake01.dfs.core.windows.net/"
+			"defaultValue": "https://stroage03.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -58,23 +66,29 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ls_storage03_accountKey": {
-						"value": "[parameters('ls_storage03_accountKey')]"
-					},
-					"ls_storage004_accountKey": {
-						"value": "[parameters('ls_storage004_accountKey')]"
+					"ds_mystoragelake02_accountKey": {
+						"value": "[parameters('ds_mystoragelake02_accountKey')]"
 					},
 					"ls_mystoragelake01_accountKey": {
 						"value": "[parameters('ls_mystoragelake01_accountKey')]"
 					},
-					"ls_storage03_properties_typeProperties_url": {
-						"value": "[parameters('ls_storage03_properties_typeProperties_url')]"
+					"ls_storage004_accountKey": {
+						"value": "[parameters('ls_storage004_accountKey')]"
+					},
+					"ls_storage03_accountKey": {
+						"value": "[parameters('ls_storage03_accountKey')]"
+					},
+					"ds_mystoragelake02_properties_typeProperties_url": {
+						"value": "[parameters('ds_mystoragelake02_properties_typeProperties_url')]"
+					},
+					"ls_mystoragelake01_properties_typeProperties_url": {
+						"value": "[parameters('ls_mystoragelake01_properties_typeProperties_url')]"
 					},
 					"ls_storage004_properties_typeProperties_url": {
 						"value": "[parameters('ls_storage004_properties_typeProperties_url')]"
 					},
-					"ls_mystoragelake01_properties_typeProperties_url": {
-						"value": "[parameters('ls_mystoragelake01_properties_typeProperties_url')]"
+					"ls_storage03_properties_typeProperties_url": {
+						"value": "[parameters('ls_storage03_properties_typeProperties_url')]"
 					}
 				}
 			},

@@ -5,23 +5,29 @@
 		"factoryName": {
 			"value": "ADFassETL"
 		},
-		"ls_storage03_accountKey": {
-			"value": ""
-		},
-		"ls_storage004_accountKey": {
+		"ds_mystoragelake02_accountKey": {
 			"value": ""
 		},
 		"ls_mystoragelake01_accountKey": {
 			"value": ""
 		},
-		"ls_storage03_properties_typeProperties_url": {
-			"value": "https://stroage03.dfs.core.windows.net/"
+		"ls_storage004_accountKey": {
+			"value": ""
+		},
+		"ls_storage03_accountKey": {
+			"value": ""
+		},
+		"ds_mystoragelake02_properties_typeProperties_url": {
+			"value": "https://mystroagelake02.dfs.core.windows.net/"
+		},
+		"ls_mystoragelake01_properties_typeProperties_url": {
+			"value": "https://mystroagelake01.dfs.core.windows.net/"
 		},
 		"ls_storage004_properties_typeProperties_url": {
 			"value": "https://mystorage004.dfs.core.windows.net/"
 		},
-		"ls_mystoragelake01_properties_typeProperties_url": {
-			"value": "https://mystroagelake01.dfs.core.windows.net/"
+		"ls_storage03_properties_typeProperties_url": {
+			"value": "https://stroage03.dfs.core.windows.net/"
 		},
 		"containerUri": {
 			"value": ""
