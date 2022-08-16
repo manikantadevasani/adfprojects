@@ -20,8 +20,12 @@
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
-							"modifiedDatetimeEnd": {
+							"modifiedDatetimeStart": {
 								"value": "@addDays(utcNow(),-6)",
+								"type": "Expression"
+							},
+							"modifiedDatetimeEnd": {
+								"value": "@utcNow()",
 								"type": "Expression"
 							},
 							"wildcardFileName": "*",
