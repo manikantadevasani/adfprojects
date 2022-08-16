@@ -21,14 +21,14 @@
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"modifiedDatetimeStart": {
-								"value": "@addDays(utcNow(),-4)",
+								"value": "@addDays(utcNow(),-6)",
 								"type": "Expression"
 							},
 							"modifiedDatetimeEnd": {
 								"value": "@utcNow()",
 								"type": "Expression"
 							},
-							"wildcardFileName": "*.txt",
+							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
