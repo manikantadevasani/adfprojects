@@ -12,7 +12,22 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "ds_storage004",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_storage004",
+						"type": "DatasetReference"
+					},
+					"name": "sink2"
+				}
+			],
 			"transformations": [
 				{
 					"name": "split1"
@@ -23,13 +38,27 @@
 				"          empno as integer,",
 				"          ename as string,",
 				"          sal as integer,",
-				"          hiredate as date 'dd-MM-yyyy'",
+				"          hiredate as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(correctrecords, incorrectrecord)"
+				"source1 split(isDate(hiredate,\"dd-mm-yyyy\"),",
+				"     disjoint: false) ~> split1@(correctrecords, incorrectrecord)",
+				"split1@correctrecords sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1",
+				"split1@incorrectrecord sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink2"
 			]
 		}
 	}
