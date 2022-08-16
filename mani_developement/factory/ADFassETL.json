@@ -1,0 +1,9 @@
+{
+	"name": "ADFassETL",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f5bd14ec-1ad9-4a84-b4fc-4c905404bf15",
+		"tenantId": "2b1e6755-617a-476f-aeb8-2491135845af"
+	}
+}

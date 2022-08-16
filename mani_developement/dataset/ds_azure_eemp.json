@@ -1,0 +1,27 @@
+{
+	"name": "ds_azure_eemp",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_emp",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Name1",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "day_union"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

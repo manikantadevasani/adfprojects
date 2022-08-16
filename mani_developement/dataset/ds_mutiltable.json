@@ -1,0 +1,13 @@
+{
+	"name": "ds_mutiltable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_mutil_table",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
