@@ -3,15 +3,7 @@
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
-			"sources": [
-				{
-					"dataset": {
-						"referenceName": "ds_mystoragelake01",
-						"type": "DatasetReference"
-					},
-					"name": "source1"
-				}
-			],
+			"sources": [],
 			"sinks": [
 				{
 					"dataset": {
@@ -27,16 +19,7 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          empno as integer,",
-				"          ename as string,",
-				"          esal as integer,",
-				"          deptno as integer",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"source1 alterRow(updateIf(1==1)) ~> alterRow1",
+				" alterRow(updateIf(1==1)) ~> alterRow1",
 				"alterRow1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
