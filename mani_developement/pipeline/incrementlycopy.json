@@ -28,7 +28,7 @@
 								"value": "@utcNow()",
 								"type": "Expression"
 							},
-							"wildcardFolderPath": "input",
+							"wildcardFolderPath": "target",
 							"wildcardFileName": "*.txt",
 							"enablePartitionDiscovery": false
 						},
