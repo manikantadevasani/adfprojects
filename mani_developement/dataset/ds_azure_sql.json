@@ -9,7 +9,7 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "empno",
+				"name": "eid",
 				"type": "int",
 				"precision": 10
 			},
@@ -19,6 +19,11 @@
 			},
 			{
 				"name": "esal",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "comm",
 				"type": "int",
 				"precision": 10
 			},
