@@ -60,6 +60,11 @@
 								"value": "@addDays(utcNow(), -1)",
 								"type": "Expression"
 							},
+							"wildcardFolderPath": {
+								"value": "@activity('Get Metadata1').output.childItems.name",
+								"type": "Expression"
+							},
+							"wildcardFileName": "*",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
