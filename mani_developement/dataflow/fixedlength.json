@@ -1,0 +1,42 @@
+{
+	"name": "fixedlength",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_mystoragelake01",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				},
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          {1000maheer     aaaaaimm} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"select1 derive(empid = substring(source1,1,4),",
+				"          empname = substring(source1,5,15),",
+				"          empadd = substring(source1,16,24)) ~> derivedColumn1",
+				"source1 select(mapColumn(",
+				"          source1 = {1000maheer     aaaaaimm}",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1"
+			]
+		}
+	}
+}
