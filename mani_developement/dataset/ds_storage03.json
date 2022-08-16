@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "source2"
+				"fileName": "distinctemp1.txt",
+				"fileSystem": "source1"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
