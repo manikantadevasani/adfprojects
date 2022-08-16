@@ -8,6 +8,9 @@
 		"ds_mystoragelake02_accountKey": {
 			"value": ""
 		},
+		"ls_azure_sql_connectionString": {
+			"value": ""
+		},
 		"ls_mystoragelake01_accountKey": {
 			"value": ""
 		},

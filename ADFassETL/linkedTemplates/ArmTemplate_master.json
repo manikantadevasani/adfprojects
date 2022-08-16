@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ds_mystoragelake02'"
 		},
+		"ls_azure_sql_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_azure_sql'"
+		},
 		"ls_mystoragelake01_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_mystoragelake01'"
@@ -73,6 +77,9 @@
 					"ds_mystoragelake02_accountKey": {
 						"value": "[parameters('ds_mystoragelake02_accountKey')]"
 					},
+					"ls_azure_sql_connectionString": {
+						"value": "[parameters('ls_azure_sql_connectionString')]"
+					},
 					"ls_mystoragelake01_accountKey": {
 						"value": "[parameters('ls_mystoragelake01_accountKey')]"
 					},
@@ -100,6 +107,26 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "ADFassETL_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'ADFassETL_ArmTemplate_0')]"
+			]
 		}
 	]
 }
