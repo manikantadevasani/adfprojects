@@ -65,7 +65,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(variables('filename'), 4)",
+						"value": "@equals(variables('filename'), 5)",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
@@ -86,7 +86,7 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"waitTimeInSeconds": 1
+								"waitTimeInSeconds": 100
 							}
 						}
 					]
