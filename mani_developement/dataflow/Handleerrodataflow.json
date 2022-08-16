@@ -1,0 +1,36 @@
+{
+	"name": "Handleerrodataflow",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_storage03",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "split1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          empno as integer,",
+				"          ename as string,",
+				"          sal as integer,",
+				"          hiredate as date 'dd-MM-yyyy'",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 split(ERROR_FUNCTION(''),",
+				"     disjoint: false) ~> split1@(correctrecords, incorrectrecord)"
+			]
+		}
+	}
+}
