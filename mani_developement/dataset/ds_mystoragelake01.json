@@ -1,0 +1,22 @@
+{
+	"name": "ds_mystoragelake01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_mystoragelake01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "source"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
