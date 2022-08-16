@@ -17,6 +17,9 @@
 		"ls_storage03_accountKey": {
 			"value": ""
 		},
+		"ls_stored_procedure_connectionString": {
+			"value": ""
+		},
 		"ds_mystoragelake02_properties_typeProperties_url": {
 			"value": "https://mystroagelake02.dfs.core.windows.net/"
 		},

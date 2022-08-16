@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'ls_storage03'"
 		},
+		"ls_stored_procedure_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_stored_procedure'"
+		},
 		"ds_mystoragelake02_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://mystroagelake02.dfs.core.windows.net/"
@@ -77,6 +81,9 @@
 					},
 					"ls_storage03_accountKey": {
 						"value": "[parameters('ls_storage03_accountKey')]"
+					},
+					"ls_stored_procedure_connectionString": {
+						"value": "[parameters('ls_stored_procedure_connectionString')]"
 					},
 					"ds_mystoragelake02_properties_typeProperties_url": {
 						"value": "[parameters('ds_mystoragelake02_properties_typeProperties_url')]"
