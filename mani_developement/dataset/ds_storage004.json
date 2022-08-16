@@ -7,12 +7,10 @@
 		},
 		"parameters": {
 			"container": {
-				"type": "string",
-				"defaultValue": "source2"
+				"type": "string"
 			},
 			"filename": {
-				"type": "string",
-				"defaultValue": "incorrectemp"
+				"type": "string"
 			}
 		},
 		"annotations": [],
