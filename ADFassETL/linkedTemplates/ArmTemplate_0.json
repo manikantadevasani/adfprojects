@@ -114,12 +114,10 @@
 				},
 				"parameters": {
 					"container": {
-						"type": "string",
-						"defaultValue": "source2"
+						"type": "string"
 					},
 					"filename": {
-						"type": "string",
-						"defaultValue": "incorrectemp"
+						"type": "string"
 					}
 				},
 				"annotations": [],
@@ -216,6 +214,60 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_storage03')]",
 				"[concat(variables('factoryId'), '/datasets/ds_storage004')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/errorhandlepipeline')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Data flow1",
+						"type": "ExecuteDataFlow",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "1.00:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"dataflow": {
+								"referenceName": "Handleerrodataflow",
+								"type": "DataFlowReference",
+								"parameters": {},
+								"datasetParameters": {
+									"source1": {},
+									"sink1": {
+										"container": "source1",
+										"filename": "correctfile.txt"
+									},
+									"sink2": {
+										"container": "source2",
+										"filename": "incorrectfile.txt"
+									}
+								}
+							},
+							"staging": {},
+							"compute": {
+								"coreCount": 8,
+								"computeType": "General"
+							},
+							"traceLevel": "Fine"
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {},
+					"cancelAfter": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/dataflows/Handleerrodataflow')]"
 			]
 		}
 	]
