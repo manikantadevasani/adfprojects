@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "surrogatekey.txt",
 				"fileSystem": "source1"
 			},
 			"columnDelimiter": ",",
