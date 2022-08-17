@@ -1,0 +1,30 @@
+{
+	"name": "ds_azure_sql_parameterized",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_sql_parameterized",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Tablename": {
+				"type": "string"
+			},
+			"Tableschema": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().Tableschema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().Tablename",
+				"type": "Expression"
+			}
+		}
+	}
+}
