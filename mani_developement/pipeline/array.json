@@ -58,7 +58,7 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "Email",
+								"variableName": "new",
 								"value": {
 									"value": "@concat(item().email,';',variables('Tempemail'))\n",
 									"type": "Expression"
@@ -74,6 +74,9 @@
 				"type": "String"
 			},
 			"Tempemail": {
+				"type": "String"
+			},
+			"new": {
 				"type": "String"
 			}
 		},
