@@ -92,11 +92,11 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Tablename": {
-											"value": "@item().Tableschema",
+											"value": "@item().TABLE_SCHEMA",
 											"type": "Expression"
 										},
 										"Tableschema": {
-											"value": "@item().Tablename",
+											"value": "@item().TABLE_NAME",
 											"type": "Expression"
 										}
 									}
@@ -108,7 +108,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"filename": {
-											"value": "@concat(item().Tableschema,'_',item().Tablename,'.txt')\n",
+											"value": "@concat(item().TABLE_SCHEMA,'_',item().TABLE_NAME,'.txt')\n",
 											"type": "Expression"
 										}
 									}
