@@ -147,12 +147,20 @@
 				"     insertable:false,",
 				"     updateable:true,",
 				"     upsertable:false,",
-				"     keys:['sql_surrkey'],",
+				"     keys:['surrkey'],",
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     saveOrder: 1,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink2"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          surrkey = sql_surrkey,",
+				"          eno = sql_eno,",
+				"          ename = sql_ename,",
+				"          gender = sql_gender,",
+				"          country = sql_country,",
+				"          isActive = sql_isActive",
+				"     )) ~> sink2"
 			]
 		}
 	}
