@@ -104,14 +104,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_storage03",
-									"type": "DatasetReference",
-									"parameters": {
-										"filename": {
-											"value": "@concat(item().TABLE_SCHEMA,'_',item().TABLE_NAME,'.txt')\n",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "ds_mystoragelake01",
+									"type": "DatasetReference"
 								}
 							]
 						}
