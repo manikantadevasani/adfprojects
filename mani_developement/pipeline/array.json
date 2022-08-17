@@ -53,16 +53,6 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Set variable1",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "Email",
-								"value": ""
-							}
-						},
-						{
 							"name": "Set variable1_copy1",
 							"type": "SetVariable",
 							"dependsOn": [],
