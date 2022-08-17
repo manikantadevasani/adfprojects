@@ -9,26 +9,29 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "eid",
+				"name": "surrkey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "eno",
 				"type": "int",
 				"precision": 10
 			},
 			{
 				"name": "ename",
-				"type": "varchar"
+				"type": "nvarchar"
 			},
 			{
-				"name": "esal",
-				"type": "int",
-				"precision": 10
+				"name": "gender",
+				"type": "nvarchar"
 			},
 			{
-				"name": "comm",
-				"type": "int",
-				"precision": 10
+				"name": "country",
+				"type": "nvarchar"
 			},
 			{
-				"name": "deptno",
+				"name": "isActive",
 				"type": "int",
 				"precision": 10
 			}
