@@ -1,0 +1,12 @@
+{
+	"name": "ls_http",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/codeforamerica/ohana-api/blob/master/data/sample-csv/addresses.csv",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
