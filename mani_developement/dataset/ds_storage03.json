@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "array.txt",
+				"fileName": "emp1.txt",
 				"fileSystem": "source"
 			},
 			"columnDelimiter": ",",
