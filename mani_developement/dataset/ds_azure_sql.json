@@ -35,7 +35,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "scd1"
+			"table": "sdc2_emp"
 		}
 	}
 }
