@@ -55,12 +55,32 @@
 						{
 							"name": "Set variable1_copy1",
 							"type": "SetVariable",
+							"dependsOn": [
+								{
+									"activity": "Set variable1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Email",
+								"value": {
+									"value": "@concat(item().email,';',variables('Tempemail'))\n",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "new",
+								"variableName": "Tempemail",
 								"value": {
-									"value": "@concat(item().email,';',variables('Tempemail'))\n",
+									"value": "@variables('Email')",
 									"type": "Expression"
 								}
 							}
