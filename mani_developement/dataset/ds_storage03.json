@@ -2,7 +2,7 @@
 	"name": "ds_storage03",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_mystoragelake01",
+			"referenceName": "ls_storage03",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "target"
+				"fileName": "array.txt",
+				"fileSystem": "source"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
