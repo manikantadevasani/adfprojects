@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "normalization.txt",
 				"fileSystem": "target1"
 			},
 			"columnDelimiter": ",",
