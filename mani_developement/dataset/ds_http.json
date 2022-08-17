@@ -1,17 +1,15 @@
 {
-	"name": "ds_mystoragelake01",
+	"name": "ds_http",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_mystoragelake01",
+			"referenceName": "ls_http",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"fileName": "zip.text",
-				"fileSystem": "source"
+				"type": "HttpServerLocation"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
