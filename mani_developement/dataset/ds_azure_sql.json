@@ -38,7 +38,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "sdc2_emp"
+			"table": "demp"
 		}
 	}
 }
