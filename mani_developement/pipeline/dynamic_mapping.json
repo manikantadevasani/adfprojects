@@ -121,7 +121,10 @@
 							"inputs": [
 								{
 									"referenceName": "ds_dynamic",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"filename": "@activity('Lookup1').output.firstRow.sourcefile"
+									}
 								}
 							],
 							"outputs": [
