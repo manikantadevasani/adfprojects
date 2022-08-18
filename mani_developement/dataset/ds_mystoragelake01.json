@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "zip.text",
+				"fileName": "empschema.txt",
 				"fileSystem": "source"
 			},
 			"columnDelimiter": ",",
