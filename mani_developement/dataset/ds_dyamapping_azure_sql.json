@@ -1,0 +1,33 @@
+{
+	"name": "ds_dyamapping_azure_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dyammapping_azure_sql",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "sourcefile",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sinkTableSchema",
+				"type": "nvarchar"
+			},
+			{
+				"name": "sinkTablename",
+				"type": "nvarchar"
+			},
+			{
+				"name": "jsonmapping",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "tbl_mapping"
+		}
+	}
+}
