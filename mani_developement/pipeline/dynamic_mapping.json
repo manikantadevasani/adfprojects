@@ -42,55 +42,13 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "empno",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "emp_no",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "empname",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "emp_name",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							},
-							{
-								"source": {
-									"name": "empsal",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "emp_sal",
-									"type": "String",
-									"physicalType": "varchar"
-								}
-							}
-						],
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
+						"value": "@json('{\n    \"name\": \"Copy data1\",\n    \"type\": \"Copy\",\n    \"dependsOn\": [],\n    \"policy\": {\n        \"timeout\": \"7.00:00:00\",\n        \"retry\": 0,\n        \"retryIntervalInSeconds\": 30,\n        \"secureOutput\": false,\n        \"secureInput\": false\n    },\n    \"userProperties\": [\n        {\n            \"name\": \"Source\",\n            \"value\": \"source//empschema.txt\"\n        },\n        {\n            \"name\": \"Destination\",\n            \"value\": \"dbo.demp\"\n        }\n    ],\n    \"typeProperties\": {\n        \"source\": {\n            \"type\": \"DelimitedTextSource\",\n            \"storeSettings\": {\n                \"type\": \"AzureBlobFSReadSettings\",\n                \"recursive\": true,\n                \"enablePartitionDiscovery\": false\n            },\n            \"formatSettings\": {\n                \"type\": \"DelimitedTextReadSettings\"\n            }\n        },\n        \"sink\": {\n            \"type\": \"AzureSqlSink\",\n            \"writeBehavior\": \"insert\",\n            \"sqlWriterUseTableLock\": false\n        },\n        \"enableStaging\": false,\n        \"translator\": {\n            \"value\": \"@json()\",\n            \"type\": \"Expression\"\n        }\n    },\n    \"inputs\": [\n        {\n            \"referenceName\": \"ds_mystoragelake01\",\n            \"type\": \"DatasetReference\"\n        }\n    ],\n    \"outputs\": [\n        {\n            \"referenceName\": \"ds_azure_sql\",\n            \"type\": \"DatasetReference\"\n        }\n    ]\n}')",
+						"type": "Expression"
 					}
 				},
 				"inputs": [
 					{
-						"referenceName": "ds_mystoragelake01",
+						"referenceName": "ds_mystoragelake02",
 						"type": "DatasetReference"
 					}
 				],
