@@ -38,7 +38,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "demp"
+			"table": "ddept"
 		}
 	}
 }
