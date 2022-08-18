@@ -19,9 +19,7 @@
 						"referenceName": "ds_mystoragelake01",
 						"type": "DatasetReference"
 					},
-					"fieldList": [
-						"childItems"
-					],
+					"fieldList": [],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
 						"enablePartitionDiscovery": false
@@ -122,11 +120,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "ds_mystoragelake01",
-									"type": "DatasetReference",
-									"parameters": {
-										"filename": "@activity('Lookup1').output.firstRow.sourcefile"
-									}
+									"referenceName": "ds_dynamic",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
