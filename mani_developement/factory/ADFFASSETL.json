@@ -1,0 +1,9 @@
+{
+	"name": "ADFFASSETL",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d005853d-8174-458d-ae8a-7778b74eee2b",
+		"tenantId": "2b1e6755-617a-476f-aeb8-2491135845af"
+	}
+}
